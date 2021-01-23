@@ -1,0 +1,59 @@
+.jfk-button{-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;cursor:default;font-size:11px;font-weight:bold;text-align:center;white-space:nowrap;margin-right:16px;height:27px;line-height:27px;min-width:54px;outline:0;padding:0 8px;}
+.jfk-button-action{-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;background-color:#4d90fe;background-image:-webkit-linear-gradient(top,#4d90fe,#4787ed);background-image:-moz-linear-gradient(top,#4d90fe,#4787ed);background-image:-ms-linear-gradient(top,#4d90fe,#4787ed);background-image:-o-linear-gradient(top,#4d90fe,#4787ed);background-image:linear-gradient(top,#4d90fe,#4787ed);border:1px solid #3079ed;color:#fff;}
+
+input.dUBGpe{padding:0 12px;
+  float:right;
+  margin:10px 0;
+}
+
+
+div.links {
+  position:relative;
+  width: 255px;
+  right: -68.45%;
+  font-family: 'Roboto', sans-serif;
+  padding-top: 10px;
+}
+.decorations {
+  font-size: 14px;
+  color: black;
+}
+/*The following decoration order must be kept, or else it won't work*/
+a.decorations:link {
+  text-decoration: none;
+}
+a.decorations:visited {
+  text-decoration: none;
+}
+a.decorations:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+.searchBar {
+  width: 100%;
+  text-align: center;
+  margin-top: 18%;
+  font-size: 15px;
+}
+
+.SearchButton {
+  background-color: #F5F5F5;
+  border: none;
+  height: 40px;
+  border-radius: 3px;
+  width: 130px;
+  display:block;
+  margin-top: 2%;
+  margin-left: 39%;
+}
+.IFLButton {
+  background-color: #F5F5F5;
+  border: none;
+  height: 40px;
+  border-radius: 3px;
+  width: 130px;
+  display:block;
+  margin-top: -2.95%;
+  margin-left: 50%;
+}
