@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+      <link rel="stylesheet" href="Styles/styles.css">
+
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <title>Google Search</title>
+        <style>
+
+          .roundedInput {
+            border-radius: 25px;
+            border: 2px solid #DCDCDC;
+            padding: 20px;
+            padding-left: 40px;
+            width: 560px;
+            height: 50px;
+            outline: none;
+            background-image: url(Images/search.png);
+            background-size: 20px;
+            background-repeat: no-repeat;
+            background-position: left;
+            background-position: 10px;
+          }
+
+        </style>
+
+    </head>
+    <body>
+
+      <div class="container" style="margin-right:-7%">
+          <div class="row" style="margin-top:10px">
+            <div class="links">
+              <a href="GoogleImageSearch.html" target="_top" class="decorations">Image Search</a>
+              <a href="GoogleAdvancedSearch.html" target="_top" style="margin-left:10px" class="decorations">Advanced Search</a>
+
+            </div>
+          </div>
+      </div>
+
+      <img src="Images/google.png" style="position:absolute;margin-top:35px;margin-left:525px;width:292px;z-index:-5">
+
+        <form action="https://google.com/search" class="searchBar">
+            <input type="text" name="q" class="roundedInput">
+            <input type="submit" value="Google Search" class="SearchButton">
+            <input type="submit" name="btnI" value="I'm Feeling Lucky" class="IFLButton">
+        </form>
+    </body>
+</html>
