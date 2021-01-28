@@ -1,0 +1,26 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+    <h1> New Page </h1>
+
+    <br>
+
+      <form action="{% url 'encyclopedia:newEntry' %}" method="GET">
+        <label for="pageTitle">Enter New Page Title:</label>
+
+        <input type="text" name="pageTitle" id=pageTitle placeholder="Page Title">
+<br><br>
+
+
+      <label for="markdownContent">New Encyclopedia's Markdown Content:</label><br><small style="color:#696969">Remember to Add a Heading...</small><br>
+      <textarea id="markdownContent" name="markdownContent" style="height:300px;">
+        </textarea>
+        <br><br>
+        <input type="submit" value="Submit" class="submitButton">
+      </form>
+
+{% endblock %}
