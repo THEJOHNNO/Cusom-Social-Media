@@ -1,0 +1,64 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+
+
+{% block body %}
+
+
+  <div id="viewPage">
+
+
+    <div class="container">
+
+
+      <div class="row" id="thirdRow">
+        <div class="formBorder" style="margin-top:10px;">
+          <div id="post">
+            {% for post in pageView %}
+              <a href="{% url 'network:profile' post.user.id %}" style="color:#404040; font-size: 25px; font-weight: 600;" id"nefkjwenf">{{post.user}}</a>
+              <p style="margin-top: 10px; font-size: 18px; color: #505050">{{post.postContent}}</p>
+              <span style="color: #808080;">{{post.dateTime}}</span>
+
+              <div class="container" style="padding: 8px 0px 0px 0px; margin: 0px;">
+                <div class="row">
+                  <a class="heartLinks" style="margin-left: 15px;" data-id="{{post.id}}">
+<img src="{% static 'heart.png' %}" style="height: auto; max-width: 20px; display: block"></a>
+                  <span style="position: relative; display: inline-block;" data-ids="{{post.id}}">{{post.likes}}</span>
+                </div>
+              </div>
+              <hr>
+            {% empty %}
+              {{message}}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="pagination" style="margin: 15px 0px 0px -12px;">
+        <span class="step-links">
+            {% if page_obj.has_previous %}
+                <a href="?page=1">&laquo; first |</a>
+                <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+            {% endif %}
+
+            <span class="current">
+                | Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }} |
+            </span>
+
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}">next |</a>
+                <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+            {% endif %}
+        </span>
+      </div>
+
+
+
+    </div>
+
+  </div>
+
+{% endblock %}

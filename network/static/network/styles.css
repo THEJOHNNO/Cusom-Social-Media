@@ -1,0 +1,33 @@
+#firstRow {
+  height: 60px;
+}
+#thirdRow {
+
+}
+.postForm {
+  width: 100%;
+}
+.postText {
+  min-height: 100px;
+  width: 100%;
+  border-color: #D3D3D3;
+  border-radius: 5px;
+}
+.body {
+  width: 100%;
+}
+.container {
+  width: 100%;
+  margin: 20px;
+}
+.formBorder {
+  width:100%;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #DCDCDC;
+  padding: 25px;
+  border-radius: 5px;
+}
+.pagination {
+  background-color: white;
+}
