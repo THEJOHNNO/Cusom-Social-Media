@@ -1,0 +1,62 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+{% block scripts %}
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("savePost").onclick = save_post;
+      })
+
+      function save_post() {
+          var postContent = document.getElementById("textOfPost").value;
+
+          fetch("/submitEditedPost", {
+            method: 'POST',
+            body: JSON.stringify({
+                postContent: document.getElementById("textOfPost").value,
+                postId: document.getElementById("postIdH1").innerText
+            })
+          })
+          .then(response => response.json())
+          .then(result => {
+              // Print result
+              console.log(result);
+              alert(result.message);
+              window.location.href = "/";
+
+          });
+        }
+
+
+    </script>
+{% endblock %}
+
+
+  <div id="viewPage">
+
+
+    <div class="container">
+
+      <div class="row" id="firstRow">
+        <h1>Edit Post&nbsp</h1><h1 style="display: inline-block;" id="postIdH1">{{post.id}}</h1>
+      </div>
+      <div class="row" id="secondRow">
+        <div class="formBorder" style="height: 400px;">
+
+          <form action="" method="post">
+
+            <textarea name="postText" class="postText" id="textOfPost" style="height: 310px;">{{post.postContent}}</textarea>
+
+            <input type="submit" name="submitPost" id="savePost" class="btn btn-primary" value="Save">
+          </form>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+
+{% endblock %}
